@@ -5,12 +5,12 @@ public interface VirtualPetTest {
 
 	
 	
-	@Test
-	public void shouldGiveIncomeOf1MForThirdLetter() {
-		VirtualPet underTest = new VirtualPet();// arrange
-		String result = underTest.determineIncome("Michael", "Feathers", "xxauary");// act
-		Assert.assertEquals("$1,000,000", result);
-	}
+	//@Test
+	//public void () {
+	//	VirtualPet underTest = new VirtualPet();// arrange
+	//	String result = underTest.choose();// act
+	//	Assert.assertEquals(, result);
+	//}
 	  
 	
 }

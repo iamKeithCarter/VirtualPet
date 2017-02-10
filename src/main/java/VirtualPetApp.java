@@ -15,7 +15,7 @@ public class VirtualPetApp {
 		do {
 			System.out.println("Every pet needs a name, what would you like to name your pet?");
 
-			String petName = scanner.next();
+			 petName = scanner.next();
 
 			introText();
 			
@@ -25,14 +25,16 @@ public class VirtualPetApp {
 			
 				input = scanner.nextInt();
 				myPet.chooseAttributeFactors(input);
-				myPet.tick();
+				int RelativeTimeTicks = myPet.tick()*4;
+				
 				alive = myPet.isPetAlive();
 
 				//myPetStutus();
 				
 				//private static void myPetStatus(){
-					System.out.println("");
-					System.out.println("");
+					System.out.println();
+					System.out.println("    "+(RelativeTimeTicks) +" hours have past since "+petName +" was cared for");
+					System.out.println();
 					System.out.println("    Hunger   " + "Thrist   " + "Sleep    " + "Boredom    " + "Clean Up ");
 					System.out.println("    " + myPet.hungerStatus() + "        " + myPet.thristStatus() + "        "
 							+ myPet.sleepStatus() + "        " + myPet.playStatus() + "           " + myPet.wasteStatus());
@@ -73,15 +75,22 @@ public class VirtualPetApp {
 
 	
 	private static void introText(){
-		
-		System.out.println(
-				" Thanks for adopting " + petName + " If you feed, play with and let " + petName + " rest,");
+		System.out.println(" Say hello to " + petName );
+		System.out.println();
+
+		System.out.println(" Thanks for adopting " + petName + ". You should know that "+ petName );
+		System.out.println(" is a Relative-Time pet. As such "+petName+"'s time-stream flows much ");
+		System.out.println(" faster that yours, but if you feed, play with, and let " + petName + " rest,");
 		System.out.println(" you will enjoy many many years with your new Virtual pet. ");
-		System.out.println(" Please dont let any of " + petName + "'s needs go above 100 or" + petName
+		System.out.println();
+
+		System.out.println(" Please dont let any of " + petName + "'s needs go above 100 or " + petName
 				+ " may become unresponsive");
-		System.out.println(" I think " + petName + " loves you.  Awwwww.. Take care.");
-		System.out.println("");
-		System.out.println("");
+		System.out.println();
+
+		System.out.println("       I think " + petName + " loves you.  Awwwww.. Take care.");
+		System.out.println();
+		System.out.println();
 
 		
 	}
